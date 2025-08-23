@@ -1,0 +1,7 @@
+gliner
+uvicorn
+pydantic
+fastapi
+httpx
+pytest
+huggingface_hub
