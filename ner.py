@@ -4,7 +4,7 @@ from pydantic import BaseModel
 import uvicorn
 
 # Load the model from the local models directory
-model = GLiNER.from_pretrained("urchade/gliner_large-v2.1", cache_dir="./models1")
+model = GLiNER.from_pretrained("urchade/gliner_large-v2.1", cache_dir="./models")
 
 app = FastAPI()
 
