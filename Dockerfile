@@ -3,6 +3,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
-# ENV TRANSFORMERS_OFFLINE=1
+ENV TRANSFORMERS_OFFLINE=1
+ENV TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1
 RUN pytest
 CMD ["uvicorn", "ner:app", "--host", "0.0.0.0", "--port", "8000"]
