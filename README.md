@@ -60,3 +60,28 @@ Run the tests
 ```bash
 pytest
 ```
+
+## Overall architecture
+```mermaid
+sequenceDiagram
+    actor User
+    User->>Email Server: Sends an email
+    Email Server->>App Server: Starts processing
+    activate App Server
+    App Server->>NER: Extract entities
+    App Server->>DB: Write to DB
+    App Server->>Email Server: Creates a link
+    deactivate App Server
+    Email Server->>User: Sends a link
+    User->>App Server: Visits the link
+    activate App Server
+    App Server->>DB: Fetch data from DB
+    App Server->>User: Renders the page
+    deactivate App Server
+    User->>App Server: Finalizes the Shipment
+    activate App Server
+    App Server->>DB: Fetch data from DB
+    App Server->>Easypost: Creates a label
+    App Server->>User: Downloads the label
+    deactivate App Server
+```
