@@ -54,9 +54,9 @@ pip install -r requirements.txt
 ```
 Run the application
 ```bash 
-TRANSFORMERS_OFFLINE=1 uvicorn ner:app
+uvicorn ner:app
 ```
 Run the tests
 ```bash
-TRANSFORMERS_OFFLINE=1 pytest
+pytest
 ```

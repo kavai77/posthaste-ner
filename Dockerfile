@@ -3,6 +3,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
-# ENV TRANSFORMERS_OFFLINE=1
+# running the tests will make sure, it will download the models from huggingface and build the image with the downloaded models already
 RUN pytest
 CMD ["uvicorn", "ner:app", "--host", "0.0.0.0", "--port", "8000"]
