@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from gliner import GLiNER
 from pydantic import BaseModel
 
-model = GLiNER.from_pretrained("urchade/gliner_large-v2.1", cache_dir="./models")
+model = GLiNER.from_pretrained("urchade/gliner_large-v2.1", cache_dir="./models", local_files_only=True, weights_only=False)
 
 app = FastAPI()
 
