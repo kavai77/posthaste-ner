@@ -23,8 +23,10 @@ def test_extract_entities():
     assert "state" not in data
     assert data["address"] == "Lajos út 12/A 2/4"
     assert data["service"] == "Fedex International Economy"
-    assert data["weight"] == "2.5 kg"
-    assert data["dimensions"] == "30 cm x 20 cm x 10 cm"
+    assert data["weight"] == 2.5
+    assert data["length"] == 30
+    assert data["width"] == 20
+    assert data["height"] == 10
     assert data["item"] == "charger"
     assert data["sender"] == "John Doe"
     assert data["recipient"] == "Jane Smith"
