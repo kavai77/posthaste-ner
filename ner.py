@@ -16,7 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-labels = ["postcode", "city", "country", "state", "address", "date", "service", "weight", "dimensions", "item", "sender", "recipient"]
+labels = ["postcode", "city", "country", "state", "address", "phone", "email", "weight", "dimensions", "item", "recipient"]
 numeric_labels = ["number"]
 dimension_labels = ["length", "width", "height"]
 
