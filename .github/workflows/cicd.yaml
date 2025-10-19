@@ -10,11 +10,8 @@ env:
 
 jobs:
   cicd:
-    strategy:
-      matrix:
-        os: [ ubuntu-latest, ubuntu-24.04-arm ]
-    name: CICD (${{ matrix.os }})
-    runs-on: ${{ matrix.os }}
+    name: CICD
+    runs-on: ubuntu-24.04-arm
     permissions:
       contents: read
       packages: write
